@@ -21,7 +21,6 @@ const ToDo = () => {
     const task = taskRef.current.value;
 
     if (isValid(task)) {
-      alert("Agregaste una nueva tarea!");
       setTasks([
         ...tasks,
         {
@@ -35,7 +34,7 @@ const ToDo = () => {
   };
 
   return (
-    <div className="py-3 px-5 border shadow-md">
+    <div className="py-3 px-5 border shadow-md mb-2 min-h-96">
       <h2 className="font-bold text-center text-xl">To do list...</h2>
 
       <form onSubmit={handleSubmit} className="flex flex-col xl:flex-row gap-2 items-center">
@@ -65,7 +64,7 @@ const ToDo = () => {
           Add
         </button>
       </form>
-      <List tasks={tasks} />
+      <List tasks={tasks} setTasks={setTasks}/>
     </div>
   );
 };

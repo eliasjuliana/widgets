@@ -40,7 +40,7 @@ const Weather = () => {
   }
 
   return (
-    <div className="flex flex-col content-center items-center border shadow-md md:flex-row">
+    <div className="flex flex-col content-center items-center border shadow-md md:flex-row lg:flex-col min-h-96">
       <WeatherForm getWeather={getWeather} />
       {weatherData && <WeatherCard weatherData={weatherData} />}
     </div>

@@ -11,7 +11,7 @@ import Weather from "./Weather";
 const Home = () => {
   return (
     <main className="relative h-full">
-      <h1 className="m-10 p-4 bg-black text-yellow-50 text-center text-6xl font-bold">
+      <h1 className="p-4 py-16 bg-black text-gray-100 text-center text-6xl font-bold tracking-wider">
         Widgets
       </h1>
 

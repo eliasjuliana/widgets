@@ -1,10 +1,13 @@
 const Item = (props) => {
-  const { task } = props;
+  const { task, handleDelete } = props;
 
   return (
     <li className="py-0.5 p-2 even:bg-slate-200 flex justify-between">
       {task.content}
-      <span className="material-symbols-outlined">delete</span>
+      <button>
+      <span onClick={()=>handleDelete(task.id)} className="material-symbols-outlined">delete</span>
+      </button>
+
     </li>
   );
 };

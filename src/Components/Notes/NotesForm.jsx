@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { getRandomNumber } from "../../helpers";
 
 const NotesForm = (props) => {
-  const { setNote } = props;
+  const { setNotes } = props;
 
   const titleRef = useRef();
   const contentRef = useRef();
@@ -27,8 +27,7 @@ const NotesForm = (props) => {
     const content = contentRef.current.value;
 
     if (isValidData(title, content)) {
-      alert("Note saved");
-      setNote((notes) => [
+      setNotes((notes) => [
         ...notes,
         {
           id: getRandomNumber(0, 5000),
